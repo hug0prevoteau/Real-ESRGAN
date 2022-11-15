@@ -159,6 +159,7 @@ def main():
                 save_path = os.path.join(args.output, f'{imgname}.{extension}')
             else:
                 save_path = os.path.join(args.output, f'{imgname}_{args.suffix}.{extension}')
+            output = cv2.resize(output,dsize=None,fx=2,fy=2)
             cv2.imwrite(save_path, output)
 
 
